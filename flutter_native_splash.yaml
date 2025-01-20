@@ -1,4 +1,7 @@
 flutter_native_splash:
-  color: "#FFFFFF" #backgound color
+  color: "#FFFFFF" 
   image: assets/images/keno_code_challenge.png
+  android: true 
+  ios: true 
+  web: true 
 

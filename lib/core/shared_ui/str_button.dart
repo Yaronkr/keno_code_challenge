@@ -6,11 +6,13 @@ class StrButton extends StatelessWidget {
     required this.text,
     required this.onPressed,
     required this.gradient,
+    this.isActive = true,
   });
 
   final String text;
   final Function() onPressed;
   final LinearGradient gradient;
+  final bool isActive;
 
   @override
   Widget build(BuildContext context) {
@@ -19,21 +21,22 @@ class StrButton extends StatelessWidget {
       width: 250,
       height: 38,
       decoration: BoxDecoration(
-        boxShadow: [BoxShadow(color: Colors.black26, offset: Offset(0, 4), blurRadius: 5.0)],
-        gradient: gradient,
+        boxShadow: isActive ? [BoxShadow(color: Colors.black26, offset: Offset(0, 4), blurRadius: 5.0)] : null,
+        gradient: isActive ? gradient : null,
         borderRadius: BorderRadius.circular(borderRadius),
+        color: isActive ? null : Colors.grey.shade100,
       ),
       child: ElevatedButton(
-        onPressed: onPressed,
+        onPressed: isActive? onPressed : null,
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.transparent,
           shadowColor: Colors.transparent,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(borderRadius)),
         ),
-        child: Text(
+        child: isActive? Text(
           text,
           style: Theme.of(context).textTheme.bodyLarge,
-        ),
+        ) : null,
       ),
     );
   }

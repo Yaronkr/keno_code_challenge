@@ -26,6 +26,7 @@ class ResultsScreen extends StatelessWidget {
           title: const Text(
             'Lottery Draw ',
           ),
+          centerTitle: true,
         ),
         body: Center(
           child: LayoutBuilder(
@@ -38,6 +39,7 @@ class ResultsScreen extends StatelessWidget {
                   final bloc = context.read<ResultsBloc>();
 
                   return Container(
+                    alignment: Alignment.center,
                     width: containerWidth,
                     height: containerHeight,
                     margin: const EdgeInsets.all(16),
@@ -60,6 +62,7 @@ class ResultsScreen extends StatelessWidget {
                           )
                         : SingleChildScrollView(
                             child: Column(
+                              mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.center,
                               spacing: GameHelper.getWidgetSpacing(),
                               children: [
@@ -68,14 +71,14 @@ class ResultsScreen extends StatelessWidget {
                                 },
                                 DrawNumbersContainer(),
                                 ResultsContainer(),
-                                if (state is DrawEndedState) ...{
-                                  StrButton(
-                                      gradient: DefaultColors.blueGradient,
-                                      text: 'Back To Home Page',
-                                      onPressed: () {
-                                        context.pop();
-                                      }),
-                                }
+                                StrButton(
+                                  isActive: state is DrawEndedState,
+                                  gradient: DefaultColors.orangeGradient,
+                                  text: 'Back To Home Page',
+                                  onPressed: () {
+                                    context.pop();
+                                  },
+                                ),
                               ],
                             ),
                           ),

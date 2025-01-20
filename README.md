@@ -1,4 +1,4 @@
-# KENO COEDE CHALLENGE
+# KENO CODE CHALLENGE
 
 ## Objective:
 To create a minimal version of the Keno live ball draw and ticket matching system.
@@ -14,7 +14,7 @@ flutter pub get
 ```
 
 ## Running the Application:
-* Application can run on Web, or Android/ ios simulator
+* Application can run on Chrome(Web), or Android/ ios simulator
 ```bash
 Flutter run
 ```
@@ -24,5 +24,10 @@ Flutter run
 flutter test
 ```
 
+## TODO:
 
+1. Add about page
+2. Add game rules page
+3. Create more extensive tests
+4. Add an option to choose the gambling amount
 

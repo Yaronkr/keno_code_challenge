@@ -20,6 +20,7 @@ class TicketScreen extends StatelessWidget {
             title: const Text(
               'My Ticket',
             ),
+            centerTitle: true,
           ),
           body: Center(
             child: LayoutBuilder(
