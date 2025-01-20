@@ -1,0 +1,4 @@
+flutter_native_splash:
+  color: "#FFFFFF" #backgound color
+  image: assets/images/keno_code_challenge.png
+
