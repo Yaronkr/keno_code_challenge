@@ -7,7 +7,13 @@ structure.
 
 * Full Description can be found here: assets/pdf/keno_challenge_doc.pdf
 
-## How to Install:
+## How to Clone repository:
+```bash
+git clone git@github.com:Yaronkr/keno_code_challenge.git
+cd keno_code_challenge
+```
+
+## How to Application:
 ```bash
 flutter clean
 flutter pub get
