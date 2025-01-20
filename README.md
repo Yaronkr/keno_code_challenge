@@ -1,5 +1,7 @@
 # KENO CODE CHALLENGE
 
+![Example Image](assets/images/home_page_image.png)
+
 ## Objective:
 To create a minimal version of the Keno live ball draw and ticket matching system.
 This is meant to help us understand your programming styles and preferences, also the capability of implementing features and good code
