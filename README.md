@@ -20,6 +20,9 @@ Flutter run
 ```
 
 ## Run test
+```bash
+flutter test
+```
 
-go to test/widget_test.dart 
+
 
